@@ -1,0 +1,26 @@
+
+.xnate-site-home {
+  padding-top: 60px;
+  height: calc(100vh - 60px);
+  display: flex;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    & h1 {
+      font-size: 74px;
+    }
+
+    &-desc {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+  }
+  &__right {
+    flex: 1;
+  }
+}

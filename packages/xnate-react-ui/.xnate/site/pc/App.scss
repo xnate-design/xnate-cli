@@ -1,0 +1,33 @@
+@import '../common/style/base.scss';
+
+.xnate {
+
+
+  &-site {
+    min-width: 1200px;
+
+   
+
+    &-container {
+      margin-left: 280px;
+
+     
+
+    }
+
+    &-content {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 60px;
+      // &::-webkit-scrollbar {
+      //   display: none;
+      // }
+      
+    }
+
+   
+  }
+}
