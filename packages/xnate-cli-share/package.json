@@ -1,0 +1,31 @@
+{
+  "name": "@xnate/xnate-cli-share",
+  "version": "1.0.0",
+  "description": "xnate-cli-share",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "es",
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wangbaoqi/xnate-cli.git"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "dev:cjs": "tsc -p tsconfig.cjs.json --watch",
+    "clean": "rm -rf es && rm -rf lib",
+    "build": "tsc && tsc -p tsconfig.cjs.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}

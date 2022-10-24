@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    // the base dir path parse no-relative module 
+    "baseUrl": ".",
+    // outDir of compiled files 
+    "outDir": "./lib",
+    // produce version of js
+    "target": "ES5",
+    "allowJs": true,
+    // produce module code according to target option, default CommonJS
+    // "module": "ESNext",
+    "strict": true,
+    "downlevelIteration": true,
+    "declaration": true,
+    // appoint jsx produce 
+    "jsx": "preserve",
+    // how to handle module. eg: [node, classic] default classic
+    // detail is how search module path
+    "moduleResolution":"Node",
+    "resolveJsonModule": true,
+    // skip declare file type check
+    "skipLibCheck": true,
+    // 是否通过为所有导入模块创建命名空间对象，允许CommonJS和ES模块之间的互操作性，开启改选项时，也自动开启- allowSyntheticDefaultImports选项，默认：false。
+    "esModuleInterop": true,
+    // compile produce .map file
+    "sourceMap": true,
+    // need import libs when compilation, same has [ES5，ES6，ESNext，DOM，DOM.Iterable、WebWorker、ScriptHost]
+    // according to target option
+    "lib": ["esnext", "dom"],
+
+    // pattern of set module name to base url 
+    // "paths": {
+    //   "@/*": [
+    //     "src/*"
+    //   ]
+    // }
+
+  },
+  // which files need to compiled
+  "include": [
+    "src/**/*"
+  ],
+  // which files need not to compiled
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,77 @@
+
+.xnate-site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  user-select: none;
+  z-index: 9;
+  backdrop-filter: saturate(50%) blur(8px);
+  box-sizing: border-box;
+  background-color: var(--site-bg-color);
+  &__lead {
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+
+  &__logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 22px;
+    color: var(--site-text-color);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    gap: 25px;
+    height: inherit;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: inherit;
+      font-weight: 500;
+      color: var(--site-text-color);
+      font-size: 15px;
+      &--active {
+        color: var(--site-side-bar-color);
+      }
+      &:hover {
+        color: var(--site-side-bar-color);
+      }
+    }
+    
+  }
+
+  &__tail {
+    display: flex;
+    align-items: center;
+  }
+
+  &__links {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--site-text-color);
+    &:hover {
+      color: var(--site-side-bar-color);
+    }
+  }
+}

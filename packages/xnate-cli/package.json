@@ -1,0 +1,58 @@
+{
+  "name": "@xnate/cli",
+  "version": "0.0.3",
+  "description": "> xnate-cli description",
+  "author": "Wangbaoqi <wangbaoqi8839@gmail.com>",
+  "homepage": "https://github.com/Wangbaoqi/xnate-cli#readme",
+  "license": "ISC",
+  "bin": {
+    "nate-cli": "bin/cli.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wangbaoqi/xnate-cli.git"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "dev-ts": "tsc ts-node tsconfig-paths/register bin/cli.js -w",
+    "build-ts": "node -r ts-node/register/transpile-only -r tsconfig-paths/register --files bin/cli.js ",
+    "build": "tsc",
+    "clean": "rimraf dist"
+  },
+  "bugs": {
+    "url": "https://github.com/Wangbaoqi/xnate-cli/issues"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "^9.4.1",
+    "dotenv": "^16.0.3",
+    "fs-extra": "^10.1.0",
+    "inquirer": "8.0.0",
+    "minimist": "^1.2.7",
+    "semver": "^7.3.8",
+    "tsconfig-paths": "^4.1.0",
+    "validate-npm-package-name": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^9.0.2",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.11.2",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/semver": "^7.3.12",
+    "@types/validate-npm-package-name": "^4.0.0",
+    "react-router-dom": "^6.3.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
