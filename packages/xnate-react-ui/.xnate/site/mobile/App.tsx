@@ -5,6 +5,8 @@ import { useSearchParams, useLocation, useNavigate } from 'react-router-dom';
 import { inIframe, isPhone } from '../utils';
 import RouteView from './routeView';
 import config from '@config';
+import routesConfig from '@mobile-routes';
+import { Route, Routes } from 'react-router-dom';
 
 import './index.scss';
 
@@ -27,18 +29,41 @@ function App() {
     html?.setAttribute('data-theme', val);
   };
 
+  routesConfig.length &&
+  routesConfig.push({
+    path: '/home',
+    component: () => import('./components/home/index'),
+  });
+
   useEffect(() => {
     if (redirect && pathname === '/') {
       navigate(`/home`);
     }
+   
     updateHTMLTag(theme);
   }, []);
 
   return (
     <div className="xnate-site-app">
-      <Header>{'d'}</Header>
+      {/* <Header>{'d'}</Header> */}
       <main className="xnate-site-app__container">
-        <RouteView />
+        {/* <RouteView /> */}
+        <Routes>
+          {routesConfig.map((route, idx: number) => {
+            const LazyComponent = React.lazy(route.component);
+            return (
+              <Route
+                key={idx}
+                path={route.path}
+                element={
+                  <React.Suspense fallback={<>...</>}>
+                    <LazyComponent />
+                  </React.Suspense>
+                }
+              ></Route>
+            );
+          })}
+        </Routes>
       </main>
     </div>
   );

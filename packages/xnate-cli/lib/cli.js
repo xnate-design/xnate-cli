@@ -58,6 +58,22 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -83,7 +99,6 @@ var initCli = function () { return __awaiter(void 0, void 0, void 0, function ()
                 userHome = os.homedir();
                 args = (0, minimist_1.default)(process.argv.slice(2));
                 envPath = path.resolve(userHome, '.env');
-                (0, logger_1.log)('xnate cli start');
                 // check node version
                 // check current os node version and pkgVersion
                 if (!semver_1.default.satisfies(process.version, pkgVersion, { includePrerelease: true })) {
@@ -105,7 +120,6 @@ var initCli = function () { return __awaiter(void 0, void 0, void 0, function ()
 }); };
 var registerCommands = function () {
     var program = new commander_1.Command();
-    // log(program)
     program.version("xnate-cli ".concat(pkgConfig.version)).usage('<command> [options]');
     program
         .command('init <app-name>')
@@ -119,6 +133,23 @@ var registerCommands = function () {
         .command('gen:ui <app-name>')
         .description('Generates the UI for the specified component')
         .action(command_1.genUi);
+    program
+        .command('dev:ui')
+        .description('Run xnate react ui component development')
+        .action(command_1.devUi);
+    program
+        .command('build:ui')
+        .description('Build xnate react ui component production')
+        .action(command_1.buildUi);
+    program.on('command:*', function (_a) {
+        var _b = __read(_a, 1), cmd = _b[0];
+        (0, logger_1.log)();
+        logger_1.logger.error("UnKnow Command ".concat(logger_1.logger.cyan(cmd)));
+        (0, logger_1.log)();
+        program.outputHelp();
+        process.exit(1);
+    });
+    program.commands.forEach(function (c) { return c.on('--help', function () { return console.log(); }); });
     program
         .option('-d, --debug', 'Enable debug mode')
         .parse(process.argv);

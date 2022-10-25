@@ -7,7 +7,7 @@ import semver from 'semver';
 import { Command } from 'commander';
 
 import { log, logger } from './shared/logger';
-import { init, genUi } from './command';
+import { init, genUi, devUi, buildUi } from './command';
 const pkgConfig = require('../package.json');
 
 const initCli = async () => {
@@ -17,8 +17,6 @@ const initCli = async () => {
 
   const args = minimist(process.argv.slice(2));
   const envPath = path.resolve(userHome, '.env');
-
-  log('xnate cli start');
 
   // check node version
   // check current os node version and pkgVersion
@@ -41,10 +39,6 @@ const initCli = async () => {
 const registerCommands = () => { 
 
   const program = new Command();
-
-  // log(program)
-  
-
   program.version(`xnate-cli ${pkgConfig.version}`).usage('<command> [options]');
 
   program
@@ -61,6 +55,25 @@ const registerCommands = () => {
     .description('Generates the UI for the specified component')
     .action(genUi)
   
+  program
+    .command('dev:ui')
+    .description('Run xnate react ui component development')
+    .action(devUi)
+  
+  program
+    .command('build:ui')
+    .description('Build xnate react ui component production')
+    .action(buildUi)
+
+  program.on('command:*', ([cmd]) => {
+    log();
+    logger.error(`UnKnow Command ${logger.cyan(cmd)}`);
+    log();
+    program.outputHelp();
+    process.exit(1);
+  });
+
+  program.commands.forEach((c) => c.on('--help', () => console.log()));
 
   program
     .option('-d, --debug', 'Enable debug mode')

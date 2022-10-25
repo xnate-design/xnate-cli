@@ -19,6 +19,9 @@ exports.logger = {
     error: function (text) {
         (0, console_1.log)(chalk_1.default.hex('#f44336')(text));
     },
+    cyan: function (text) {
+        (0, console_1.log)(chalk_1.default.cyan(text));
+    }
 };
 var console_2 = require("console");
 Object.defineProperty(exports, "log", { enumerable: true, get: function () { return console_2.log; } });

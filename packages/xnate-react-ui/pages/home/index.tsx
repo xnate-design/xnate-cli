@@ -6,6 +6,7 @@ import zh_CN from './locale/zh-CN'
 
 import { getPCLocationInfo } from '../../.xnate/site/pc/utils'
 
+
 import './index.scss'
 
 const homePack = {

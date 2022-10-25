@@ -3,5 +3,6 @@ export declare const logger: {
     success(text: string): void;
     warning(text: string): void;
     error(text: string): void;
+    cyan(text: string): void;
 };
 export { log } from 'console';

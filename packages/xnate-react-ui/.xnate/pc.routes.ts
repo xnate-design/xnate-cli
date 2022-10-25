@@ -25,9 +25,9 @@ export default [
     component: () => import('/Users/wangbaoqi/personal/xnate-design/xnate-cli/packages/xnate-react-ui/docs/hooks/theme.zh-CN.md')
   },
   {
-    path: '/index/components/button',
+    path: '/zh-CN/components/button',
     // @ts-ignore
-    component: () => import('/Users/wangbaoqi/personal/xnate-design/xnate-cli/packages/xnate-react-ui/src/components/button/docs/index.md')
+    component: () => import('/Users/wangbaoqi/personal/xnate-design/xnate-cli/packages/xnate-react-ui/src/components/button/docs/zh-CN.md')
   },
   {
     path: '/zh-CN/guide',

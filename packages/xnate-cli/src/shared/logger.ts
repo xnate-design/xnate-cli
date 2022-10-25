@@ -14,6 +14,9 @@ export const logger = {
   error(text: string) {
     log(chalk.hex('#f44336')(text));
   },
+  cyan(text: string) { 
+    log(chalk.cyan(text));
+  }
 }
 
 export { log } from 'console';
