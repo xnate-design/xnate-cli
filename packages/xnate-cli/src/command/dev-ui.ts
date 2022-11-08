@@ -22,7 +22,6 @@ async function startServer(force: boolean | undefined) {
   server && (await server.close());
   watchers && (await watchers.close());
 
-  //
   await compileSite();
   const xnateConfig = resolveXnateConfig();
   const viteDevConfig = getDevConfig(xnateConfig);
@@ -40,6 +39,7 @@ async function startServer(force: boolean | undefined) {
   logger.info(`${isRestart ? 'Res' : 'S'}tart successfully!!!`);
 }
 
+// this is a workaround forever 
 export async function devUi(cmd: { force?: boolean }) {
   process.env.NODE_ENV = 'development';
   process.env.DEBUG = 'true';

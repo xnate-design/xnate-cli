@@ -76,10 +76,8 @@ function startServer(force) {
                     _c.label = 4;
                 case 4:
                     _b;
-                    //
                     return [4 /*yield*/, (0, compilerSite_1.compileSite)()];
                 case 5:
-                    //
                     _c.sent();
                     xnateConfig = (0, xnate_config_1.resolveXnateConfig)();
                     viteDevConfig = (0, vite_config_1.getDevConfig)(xnateConfig);
@@ -101,6 +99,7 @@ function startServer(force) {
         });
     });
 }
+// this is a workaround forever 
 function devUi(cmd) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
