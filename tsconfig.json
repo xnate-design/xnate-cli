@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "strict": true,
+    "declaration": true,
+    "allowJs": true,
+    // skip declare file type check
+    "skipLibCheck": true,
+    // 是否通过为所有导入模块创建命名空间对象，允许CommonJS和ES模块之间的互操作性，开启改选项时，也自动开启- allowSyntheticDefaultImports选项，默认：false。
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    // need import libs when compilation, same has [ES5，ES6，ESNext，DOM，DOM.Iterable、WebWorker、ScriptHost]
+    // according to target option
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    // how to handle module. eg: [node, classic] default classic
+    // detail is how search module path
+    "moduleResolution": "node"
+  },
+  // which files need not to compiled
+  "exclude": [
+    "node_modules"
+  ]
+}

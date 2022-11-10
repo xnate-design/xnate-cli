@@ -1,0 +1,30 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion":"latest",
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "ignorePatterns": [
+    "packages/xnate-cli/lib/**",
+    "packages/xnate-cli/site/**",
+    "packages/xnate-cli/bin/**",
+    "packages/xnate-cli/template/**",
+    "packages/xnate-icons/es/**",
+    "packages/xnate-icons/lib/**",
+    "packages/xnate-react-ui/site/**",
+    "packages/xnate-plugin-vite-md/dist/**",
+    "website/**"
+  ]
+}
