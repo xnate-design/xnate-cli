@@ -1,3 +1,4 @@
+import { log } from 'console';
 import { XNATE_CONFIG } from './../shared/constant';
 import { merge } from 'lodash';
 
@@ -39,12 +40,13 @@ async function startServer(force: boolean | undefined) {
   logger.info(`${isRestart ? 'Res' : 'S'}tart successfully!!!`);
 }
 
-// this is a workaround forever 
+// this is a workaround forever
 export async function devUi(cmd: { force?: boolean }) {
   process.env.NODE_ENV = 'development';
   process.env.DEBUG = 'true';
 
   ensureDirSync(SRC_DIR);
-
   await startServer(cmd.force);
+
+  console.log('');
 }
