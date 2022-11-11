@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Xnate-cli Design',
+  title: 'Xnate-Cli',
   tagline: '运行一行命令来构建构建现代web网站',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -45,15 +45,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -62,12 +60,11 @@ const config = {
     ],
   ],
 
-  
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Xnate-cli Design',
+        title: 'Xnate-Cli ',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -88,9 +85,9 @@ const config = {
           {
             href: 'https://wangbaoqi.tech',
             label: '博客',
-            position: 'right'
+            position: 'right',
           },
-          
+
           {
             type: 'localeDropdown',
             position: 'right',
