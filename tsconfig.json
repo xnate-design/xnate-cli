@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es5",
     "strict": true,
     "declaration": true,
     "allowJs": true,
@@ -14,7 +14,7 @@
     // need import libs when compilation, same has [ES5，ES6，ESNext，DOM，DOM.Iterable、WebWorker、ScriptHost]
     // according to target option
     "lib": ["esnext", "dom"],
-    "module": "esnext",
+    // "module": "esnext",
     // how to handle module. eg: [node, classic] default classic
     // detail is how search module path
     "moduleResolution": "node"

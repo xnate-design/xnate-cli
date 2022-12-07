@@ -17,9 +17,9 @@
     "*.scss"
   ],
   "scripts": {
-    "dev": "nate-cli dev:ui",
-    "build": "nate-cli build:ui",
-    "preview": "nate-cli preview",
+    "dev": "xnate-cli dev:ui",
+    "build": "xnate-cli build:ui",
+    "preview": "xnate-cli preview",
     "compile": "xnate-cli compile",
     "lint": "xnate-cli lint",
     "changelog": "xnate-cli changelog",

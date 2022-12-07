@@ -1,6 +1,40 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SITE_CONFIG = exports.SITE_MOBILE_ROUTES = exports.SITE_PC_ROUTES = exports.SITE_PC_DIR = exports.SITE_DIR = exports.SITE_PUBLIC_PATH = exports.SITE_OUTPUT_PATH = exports.SITE = exports.CLI_PACKAGE_JSON = exports.UI_PACKAGE_JSON = exports.GENERATORS_DIR = exports.TESTS_DIR_NAME = exports.DIR_INDEX = exports.DOCS_DIR_NAME = exports.LOCALE_DIR_NAME = exports.EXAMPLE_DIR_NAME = exports.STYLE_DIR_NAME = exports.PUBLIC_DIR_INDEXES = exports.SCRIPTS_EXTENSIONS = exports.VITE_RESOLVE_EXTENSIONS = exports.ESLINT_EXTENSIONS = exports.ROOT_PAGES_DIR = exports.ROOT_DOCS_DIR = exports.TYPES_DIR = exports.UMD_DIR = exports.LIB_DIR = exports.ES_DIR = exports.SRC_DIR_COMPONENTS = exports.SRC_DIR = exports.XNATE_CONFIG = exports.CWD = exports.DEPENDENCIES_PATH = exports.NPM_NAME = exports.DEFAULT_CLI_HOME = void 0;
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+exports.SITE_CONFIG =
+  exports.SITE_MOBILE_ROUTES =
+  exports.SITE_PC_ROUTES =
+  exports.SITE_PC_DIR =
+  exports.SITE_DIR =
+  exports.SITE_PUBLIC_PATH =
+  exports.SITE_OUTPUT_PATH =
+  exports.SITE =
+  exports.CLI_PACKAGE_JSON =
+  exports.UI_PACKAGE_JSON =
+  exports.GENERATORS_DIR =
+  exports.TESTS_DIR_NAME =
+  exports.DIR_INDEX =
+  exports.DOCS_DIR_NAME =
+  exports.LOCALE_DIR_NAME =
+  exports.EXAMPLE_DIR_NAME =
+  exports.STYLE_DIR_NAME =
+  exports.PUBLIC_DIR_INDEXES =
+  exports.SCRIPTS_EXTENSIONS =
+  exports.VITE_RESOLVE_EXTENSIONS =
+  exports.ESLINT_EXTENSIONS =
+  exports.ROOT_PAGES_DIR =
+  exports.ROOT_DOCS_DIR =
+  exports.TYPES_DIR =
+  exports.UMD_DIR =
+  exports.LIB_DIR =
+  exports.ES_DIR =
+  exports.SRC_DIR_COMPONENTS =
+  exports.SRC_DIR =
+  exports.XNATE_CONFIG =
+  exports.CWD =
+  exports.DEPENDENCIES_PATH =
+  exports.NPM_NAME =
+  exports.DEFAULT_CLI_HOME =
+    void 0;
 var path = require('path');
 exports.DEFAULT_CLI_HOME = '.xnate-cli';
 exports.NPM_NAME = '@xnate-cli/core';
@@ -29,7 +63,7 @@ exports.GENERATORS_DIR = path.resolve(__dirname, '../generators');
 exports.UI_PACKAGE_JSON = path.resolve(exports.CWD, 'package.json');
 exports.CLI_PACKAGE_JSON = path.resolve(__dirname, '../../package.json');
 exports.SITE = path.resolve(__dirname, '../../site');
-exports.SITE_OUTPUT_PATH = path.resolve(exports.CWD, 'site');
+exports.SITE_OUTPUT_PATH = path.resolve(exports.CWD, 'build');
 exports.SITE_PUBLIC_PATH = path.resolve(exports.CWD, 'public');
 exports.SITE_DIR = path.resolve(exports.CWD, '.xnate/site');
 exports.SITE_PC_DIR = path.resolve(exports.CWD, '.xnate/site/pc');

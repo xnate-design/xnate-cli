@@ -1,4 +1,4 @@
-const path = require('path');
+import * as path from 'path';
 
 export const DEFAULT_CLI_HOME = '.xnate-cli';
 export const NPM_NAME = '@xnate-cli/core';
@@ -30,7 +30,7 @@ export const UI_PACKAGE_JSON = path.resolve(CWD, 'package.json');
 export const CLI_PACKAGE_JSON = path.resolve(__dirname, '../../package.json');
 
 export const SITE = path.resolve(__dirname, '../../site');
-export const SITE_OUTPUT_PATH = path.resolve(CWD, 'site');
+export const SITE_OUTPUT_PATH = path.resolve(CWD, 'build');
 export const SITE_PUBLIC_PATH = path.resolve(CWD, 'public');
 export const SITE_DIR = path.resolve(CWD, '.xnate/site');
 export const SITE_PC_DIR = path.resolve(CWD, '.xnate/site/pc');

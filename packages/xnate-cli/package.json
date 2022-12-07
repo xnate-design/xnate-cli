@@ -3,10 +3,10 @@
   "version": "0.0.3",
   "description": "> xnate-cli description",
   "author": "Wangbaoqi <wangbaoqi8839@gmail.com>",
-  "homepage": "https://github.com/Wangbaoqi/xnate-cli#readme",
+  "homepage": "https://github.com/xnate-design/xnate-cli",
   "license": "ISC",
   "bin": {
-    "nate-cli": "bin/cli.js"
+    "xnate-cli": "bin/cli.js"
   },
   "files": [
     "lib"
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Wangbaoqi/xnate-cli.git"
+    "url": "git+https://github.com/xnate-design/xnate-cli.git"
   },
   "scripts": {
     "dev": "tsc -w",
@@ -26,7 +26,7 @@
     "clean": "rimraf dist"
   },
   "bugs": {
-    "url": "https://github.com/Wangbaoqi/xnate-cli/issues"
+    "url": "https://github.com/xnate-design/xnate-cli/issues"
   },
   "engines": {
     "node": ">=12"
