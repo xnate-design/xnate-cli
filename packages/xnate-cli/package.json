@@ -1,6 +1,6 @@
 {
   "name": "@xnate/cli",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "> xnate-cli description",
   "author": "Wangbaoqi <wangbaoqi8839@gmail.com>",
   "homepage": "https://github.com/xnate-design/xnate-cli",
@@ -9,7 +9,10 @@
     "xnate-cli": "bin/cli.js"
   },
   "files": [
-    "lib"
+    "lib",
+    "site",
+    "template",
+    "tsconfig.json"
   ],
   "publishConfig": {
     "access": "public"
@@ -34,8 +37,8 @@
   "dependencies": {
     "@types/glob": "^8.0.0",
     "@vitejs/plugin-react": "^2.1.0",
-    "@xnate-design/icons": "workspace:*",
-    "@xnate-plugin/vite-react-md": "workspace:*",
+    "@xnate-design/icons": "latest",
+    "@xnate-plugin/vite-react-md": "latest",
     "chalk": "4.1.2",
     "chokidar": "^3.5.3",
     "commander": "^9.4.1",
