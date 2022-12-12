@@ -1,3 +1,4 @@
+import { log } from 'console';
 import {
   SRC_DIR_COMPONENTS,
   DOCS_DIR_NAME,
@@ -21,7 +22,7 @@ import { get } from 'lodash';
 import slash from 'slash';
 
 const ROOT_DOCS_RE = /\/docs\/([-\w]+)\/([-\w]+).([-\w]+)\.md/;
-const COMPONENT_DOCS_RE = /\/([-\w]+)\/docs\/([-\w]+)\.md/;
+const COMPONENT_DOCS_RE = /\/([-\w]+)\/([-\w]+)\/docs\/([-\w]+)\.md/;
 const ROOT_LOCALE_RE = /\/pages\/([-\w]+)\/locale\/([-\w]+)\.ts/;
 const HOME_LOCALE_RE = /\/docs\/home\/\/locale\/([-\w]+)\.ts/;
 const EXAMPLE_COMPONENT_NAME_RE = /\/([-\w]+)\/example\/index.tsx/;
@@ -32,8 +33,8 @@ const getRootDocPath = (path: string): string => {
 };
 
 const getComponentsDocPath = (path: string): string => {
-  const [, routePath, language] = path.match(COMPONENT_DOCS_RE) ?? [];
-  return `/${language}/components/${routePath}`;
+  const [, category, routePath, language] = path.match(COMPONENT_DOCS_RE) ?? [];
+  return `/${language}/${category}/${routePath}`;
 };
 
 const getExampleRoutePath = (path: string): string => {

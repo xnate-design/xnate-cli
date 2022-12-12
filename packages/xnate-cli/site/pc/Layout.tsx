@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { AppHeader, AppSideBar, AppMobile } from './components/index';
 import { useParams, useLocation, Outlet, useNavigate } from 'react-router-dom';
-
 import config from '@config';
 import { getPCLocationInfo } from './utils';
 import './App.scss';
@@ -21,11 +20,7 @@ const Layout = (props: ILayout) => {
     defaultLanguage = '',
   } = config;
   const isHome = navName === 'home';
-  const componentsName = navName === 'components' ? secondName : 'home';
-
   const menuList = menu[navName] || [];
-
-  console.log('render pc app');
 
   useEffect(() => {
     if (redirect && pathname === '/') {
@@ -43,8 +38,6 @@ const Layout = (props: ILayout) => {
           <AppSideBar language={language} navName={navName} menu={menuList} />
           <div className="xnate-site-container">
             <Outlet />
-            {/* <AppMobile /> */}
-            {/* <iframe id="mobile" src={`/mobile.html#/${componentsName}?language=${language}`}></iframe> */}
           </div>
         </>
       )}

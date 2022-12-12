@@ -4,7 +4,7 @@
   padding: 20px;
   font-size: 15px;
   flex: 1;
-  max-width: 50vw;
+  max-width: 55vw;
   &__box {
     padding: 25px 30px;
     background: var(--site-secondary-bg);
@@ -103,7 +103,7 @@
         cursor: pointer;
       }
     }
-    
+
     &-box {
       overflow: auto;
       border-radius: 8px;
@@ -146,11 +146,12 @@
   }
 
   &__toc {
-    position: sticky;
+    position: fixed;
     top: 80px;
     right: 5px;
-    flex: 1 0 120px;
-    max-width: 120px;
+    flex: 1 0 160px;
+    width: 160px;
+    max-width: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;

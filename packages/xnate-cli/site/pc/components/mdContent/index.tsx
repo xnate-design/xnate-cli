@@ -8,6 +8,7 @@ export interface ITocItem {
 export interface IMdContent {
   mdContainer?: string;
   toc?: ITocItem[];
+  useMobile?: boolean;
 }
 
 import { getMDXExport } from 'mdx-bundler/client';
@@ -16,7 +17,7 @@ import { AppMobile } from '..';
 
 import './index.scss';
 
-const MdContent = ({ mdContainer = '', toc = [], ...rest }: IMdContent) => {
+const MdContent = ({ mdContainer = '', toc = [], useMobile = false }: IMdContent) => {
   const components = {
     // a: (props) => <PostLink {...props} />,
     pre: (props: any) => <CodeExample {...props} />,
@@ -34,7 +35,7 @@ const MdContent = ({ mdContainer = '', toc = [], ...rest }: IMdContent) => {
           <MDXLayout components={components} />
         </section>
       </article>
-      <AppMobile />
+      {useMobile ? <AppMobile /> : ''}
       <TableContent toc={toc} />
     </div>
   );
