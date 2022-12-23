@@ -32,3 +32,4 @@ export declare const SITE_PC_DIR: string;
 export declare const SITE_PC_ROUTES: string;
 export declare const SITE_MOBILE_ROUTES: string;
 export declare const SITE_CONFIG: string;
+export declare const JEST_CONFIG: string;

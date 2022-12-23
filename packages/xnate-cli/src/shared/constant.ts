@@ -37,3 +37,5 @@ export const SITE_PC_DIR = path.resolve(CWD, '.xnate/site/pc');
 export const SITE_PC_ROUTES = path.resolve(CWD, '.xnate/pc.routes.ts');
 export const SITE_MOBILE_ROUTES = path.resolve(CWD, '.xnate/mobile.routes.ts');
 export const SITE_CONFIG = path.resolve(CWD, '.xnate/site.config.json');
+
+export const JEST_CONFIG = path.resolve(__dirname, '../config/jest.config.js');

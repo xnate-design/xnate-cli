@@ -7,7 +7,8 @@ import semver from 'semver';
 import { Command } from 'commander';
 
 import { log, logger } from './shared/logger';
-import { init, genUi, devUi, buildUi } from './command';
+import { init, genUi, devUi, buildUi, jest } from './command';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const pkgConfig = require('../package.json');
 
 const initCli = async () => {
@@ -20,8 +21,8 @@ const initCli = async () => {
 
   // check node version
   // check current os node version and pkgVersion
-  if (!semver.satisfies(process.version, pkgVersion, { includePrerelease: true })) { 
-    logger.error(`you are using Node ${process.version}, xnate-cli need is a node version above ${pkgVersion}`)
+  if (!semver.satisfies(process.version, pkgVersion, { includePrerelease: true })) {
+    logger.error(`you are using Node ${process.version}, xnate-cli need is a node version above ${pkgVersion}`);
     process.exit(1);
   }
 
@@ -30,14 +31,12 @@ const initCli = async () => {
   // check environment variables
   if (await fs.pathExists(envPath)) {
     dotenv.config({
-      path: envPath
-    })
+      path: envPath,
+    });
   }
+};
 
-}
-
-const registerCommands = () => { 
-
+const registerCommands = () => {
   const program = new Command();
   program.version(`xnate-cli ${pkgConfig.version}`).usage('<command> [options]');
 
@@ -48,22 +47,22 @@ const registerCommands = () => {
     .option('-f, --force', 'Force overwrite existing directory files')
     .option('-T, --templatePath <templatePath>', 'Customize the template from remote repositories')
     .option('-c, --clone', 'Use git clone when fetching remote repositories')
-    .action(init)
+    .action(init);
+
+  program.command('gen:ui <app-name>').description('Generates the UI for the specified component').action(genUi);
+
+  program.command('dev:ui').description('Run xnate react ui component development').action(devUi);
+
+  program.command('build:ui').description('Build xnate react ui component production').action(buildUi);
 
   program
-    .command('gen:ui <app-name>')
-    .description('Generates the UI for the specified component')
-    .action(genUi)
-  
-  program
-    .command('dev:ui')
-    .description('Run xnate react ui component development')
-    .action(devUi)
-  
-  program
-    .command('build:ui')
-    .description('Build xnate react ui component production')
-    .action(buildUi)
+    .command('jest')
+    .description('Run jest in working directory')
+    .option('-w, --watch', 'Watch files for changes and return tests related to changed files')
+    .option('-wa, --watchAll', 'Watch files for changes and return all tests when something changed')
+    .option('-c, --component <componentName>', 'Test a specific component')
+    .option('-cc, --clearCache', 'Clear the test cache')
+    .action(jest);
 
   program.on('command:*', ([cmd]) => {
     log();
@@ -75,18 +74,15 @@ const registerCommands = () => {
 
   program.commands.forEach((c) => c.on('--help', () => console.log()));
 
-  program
-    .option('-d, --debug', 'Enable debug mode')
-    .parse(process.argv)
-
-}
+  program.option('-d, --debug', 'Enable debug mode').parse(process.argv);
+};
 
 export const cli = async () => {
   try {
     await initCli();
     registerCommands();
   } catch (err) {
-    log(err)
+    log(err);
     // logger.error(err)
   }
- }
+};

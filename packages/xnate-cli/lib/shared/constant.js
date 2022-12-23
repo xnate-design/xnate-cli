@@ -40,7 +40,8 @@ var __importStar =
     return result;
   };
 Object.defineProperty(exports, '__esModule', { value: true });
-exports.SITE_CONFIG =
+exports.JEST_CONFIG =
+  exports.SITE_CONFIG =
   exports.SITE_MOBILE_ROUTES =
   exports.SITE_PC_ROUTES =
   exports.SITE_PC_DIR =
@@ -110,4 +111,5 @@ exports.SITE_PC_DIR = path.resolve(exports.CWD, '.xnate/site/pc');
 exports.SITE_PC_ROUTES = path.resolve(exports.CWD, '.xnate/pc.routes.ts');
 exports.SITE_MOBILE_ROUTES = path.resolve(exports.CWD, '.xnate/mobile.routes.ts');
 exports.SITE_CONFIG = path.resolve(exports.CWD, '.xnate/site.config.json');
+exports.JEST_CONFIG = path.resolve(__dirname, '../config/jest.config.js');
 //# sourceMappingURL=constant.js.map
