@@ -39,3 +39,5 @@ export const SITE_MOBILE_ROUTES = path.resolve(CWD, '.xnate/mobile.routes.ts');
 export const SITE_CONFIG = path.resolve(CWD, '.xnate/site.config.json');
 
 export const JEST_CONFIG = path.resolve(__dirname, '../config/jest.config.js');
+export const JEST_STYLE_MOCK = path.resolve(__dirname, '../config/jest.style.mock');
+export const JEST_MEDIA_MOCK = path.resolve(__dirname, '../config/jest.media.mock');

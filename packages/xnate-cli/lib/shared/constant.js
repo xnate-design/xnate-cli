@@ -40,7 +40,9 @@ var __importStar =
     return result;
   };
 Object.defineProperty(exports, '__esModule', { value: true });
-exports.JEST_CONFIG =
+exports.JEST_MEDIA_MOCK =
+  exports.JEST_STYLE_MOCK =
+  exports.JEST_CONFIG =
   exports.SITE_CONFIG =
   exports.SITE_MOBILE_ROUTES =
   exports.SITE_PC_ROUTES =
@@ -112,4 +114,6 @@ exports.SITE_PC_ROUTES = path.resolve(exports.CWD, '.xnate/pc.routes.ts');
 exports.SITE_MOBILE_ROUTES = path.resolve(exports.CWD, '.xnate/mobile.routes.ts');
 exports.SITE_CONFIG = path.resolve(exports.CWD, '.xnate/site.config.json');
 exports.JEST_CONFIG = path.resolve(__dirname, '../config/jest.config.js');
+exports.JEST_STYLE_MOCK = path.resolve(__dirname, '../config/jest.style.mock');
+exports.JEST_MEDIA_MOCK = path.resolve(__dirname, '../config/jest.media.mock');
 //# sourceMappingURL=constant.js.map

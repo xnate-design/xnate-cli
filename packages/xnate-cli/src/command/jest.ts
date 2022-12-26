@@ -11,8 +11,6 @@ interface JestCommandOptions {
 }
 
 export async function jest(cmd: JestCommandOptions) {
-  console.log(JEST_CONFIG, 'cmd jest');
-
   // jest global config
   const config: any = {
     rootDir: CWD,
@@ -22,6 +20,8 @@ export async function jest(cmd: JestCommandOptions) {
     config: JEST_CONFIG,
     // textRegex: cmd.component && `${cmd.component}/__test__/.*`
   };
+
+  console.log(config, 'cmd config jest');
 
   try {
     const result = await runCLI(config as never, [CWD]);

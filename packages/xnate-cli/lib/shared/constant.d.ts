@@ -33,3 +33,5 @@ export declare const SITE_PC_ROUTES: string;
 export declare const SITE_MOBILE_ROUTES: string;
 export declare const SITE_CONFIG: string;
 export declare const JEST_CONFIG: string;
+export declare const JEST_STYLE_MOCK: string;
+export declare const JEST_MEDIA_MOCK: string;

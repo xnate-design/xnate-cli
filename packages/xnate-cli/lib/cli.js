@@ -200,6 +200,7 @@ var semver_1 = __importDefault(require('semver'));
 var commander_1 = require('commander');
 var logger_1 = require('./shared/logger');
 var command_1 = require('./command');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 var pkgConfig = require('../package.json');
 var initCli = function () {
   return __awaiter(void 0, void 0, void 0, function () {

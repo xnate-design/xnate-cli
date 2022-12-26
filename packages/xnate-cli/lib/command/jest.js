@@ -133,7 +133,6 @@ function jest(cmd) {
     return __generator(this, function (_a) {
       switch (_a.label) {
         case 0:
-          console.log(constant_1.JEST_CONFIG, 'cmd jest');
           config = {
             rootDir: constant_1.CWD,
             watch: cmd.watch,
@@ -142,6 +141,7 @@ function jest(cmd) {
             config: constant_1.JEST_CONFIG,
             // textRegex: cmd.component && `${cmd.component}/__test__/.*`
           };
+          console.log(config, 'cmd config jest');
           _a.label = 1;
         case 1:
           _a.trys.push([1, 3, , 4]);
