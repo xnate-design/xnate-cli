@@ -1,4 +1,3 @@
-import { log } from 'console';
 import { XNATE_CONFIG } from './../shared/constant';
 import { merge } from 'lodash';
 

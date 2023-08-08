@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocalStorageState } from 'ahooks';
-import { Header } from './components';
+import { Home } from './components';
 import { useSearchParams, useLocation, useNavigate } from 'react-router-dom';
 import { inIframe, isPhone } from '../utils';
 import RouteView from './routeView';
@@ -29,17 +29,10 @@ function App() {
     html?.setAttribute('data-theme', val);
   };
 
-  routesConfig.length &&
-  routesConfig.push({
-    path: '/home',
-    component: () => import('./components/home/index'),
-  });
-
   useEffect(() => {
     if (redirect && pathname === '/') {
       navigate(`/home`);
     }
-   
     updateHTMLTag(theme);
   }, []);
 
@@ -63,6 +56,7 @@ function App() {
               ></Route>
             );
           })}
+          <Route path="/home" element={<Home />}></Route>
         </Routes>
       </main>
     </div>

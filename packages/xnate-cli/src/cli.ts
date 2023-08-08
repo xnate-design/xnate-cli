@@ -7,7 +7,7 @@ import semver from 'semver';
 import { Command } from 'commander';
 
 import { log, logger } from './shared/logger';
-import { init, genUi, devUi, buildUi, jest } from './command';
+import { init, genUi, devUi, buildUi, startUi, jest } from './command';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pkgConfig = require('../package.json');
 
@@ -52,6 +52,7 @@ const registerCommands = () => {
   program.command('gen:ui <app-name>').description('Generates the UI for the specified component').action(genUi);
 
   program.command('dev:ui').description('Run xnate react ui component development').action(devUi);
+  program.command('start:ui').description('Run xnate react ui component development').action(startUi);
 
   program.command('build:ui').description('Build xnate react ui component production').action(buildUi);
 

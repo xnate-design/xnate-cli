@@ -25,9 +25,12 @@ packages/xnate-cli-shared/lib/
 packages/xnate-cli-shared/es/
 
 packages/xnate-react-ui/.xnate
+packages/xnate-react-ui/docs/.next/
 packages/xnate-react-ui/build
 
 packages/xnate-icons/es
 packages/xnate-icons/lib
 
 packages/xnate-plugin-vite-md/dist
+
+website/.next

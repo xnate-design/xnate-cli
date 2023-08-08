@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-exports.jest = exports.buildUi = exports.devUi = exports.genUi = exports.init = void 0;
+exports.jest = exports.startUi = exports.buildUi = exports.devUi = exports.genUi = exports.init = void 0;
 var init_1 = require('./init');
 Object.defineProperty(exports, 'init', {
   enumerable: true,
@@ -27,6 +27,13 @@ Object.defineProperty(exports, 'buildUi', {
   enumerable: true,
   get: function () {
     return build_ui_1.buildUi;
+  },
+});
+var start_ui_1 = require('./start-ui');
+Object.defineProperty(exports, 'startUi', {
+  enumerable: true,
+  get: function () {
+    return start_ui_1.startUi;
   },
 });
 var jest_1 = require('./jest');

@@ -1,14 +1,12 @@
+import { ensureDirSync } from 'fs-extra';
+import { SRC_DIR } from '../shared/constant';
 
-import { ensureDirSync } from "fs-extra";
-import { SRC_DIR } from "../shared/constant";
-
-import { build as buildVite } from "vite";
-import { resolveXnateConfig } from "../config/xnate.config";
-import { getBuildConfig } from "../config/vite.config";
-import { compileSite } from "../compiler/compilerSite";
+import { build as buildVite } from 'vite';
+import { resolveXnateConfig } from '../config/xnate.config';
+import { getBuildConfig } from '../config/vite.config';
+import { compileSite } from '../compiler/compilerSite';
 
 export async function buildUi() {
-
   process.env.NODE_ENV === 'production';
 
   ensureDirSync(SRC_DIR);
@@ -17,5 +15,4 @@ export async function buildUi() {
   const buildConfig = getBuildConfig(xnateConfig);
 
   await buildVite(buildConfig);
-
 }

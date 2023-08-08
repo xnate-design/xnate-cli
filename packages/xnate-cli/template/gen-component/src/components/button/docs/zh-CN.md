@@ -7,7 +7,7 @@
 ## 引入
 
 ```js
-import { Button } from 'react-vant';
+import { Button } from '';
 ```
 
 ## 代码演示

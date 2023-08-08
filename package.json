@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npx husky install",
-    "dev:docs": "pnpm --dir ./website start"
+    "dev:docs": "pnpm --dir ./website dev"
   },
   "keywords": [],
   "author": "",

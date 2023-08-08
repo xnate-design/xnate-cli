@@ -253,6 +253,7 @@ var registerCommands = function () {
     .description('Generates the UI for the specified component')
     .action(command_1.genUi);
   program.command('dev:ui').description('Run xnate react ui component development').action(command_1.devUi);
+  program.command('start:ui').description('Run xnate react ui component development').action(command_1.startUi);
   program.command('build:ui').description('Build xnate react ui component production').action(command_1.buildUi);
   program
     .command('jest')
